@@ -14,7 +14,7 @@ public class webEngageAPI  extends RestAssuredMainClass{
 				.all()
 				.given()
 				.when().post(property.getProperty("listner")).then()
-				.statusCode(HttpStatus.SC_CREATED).extract().response();
+				.statusCode(HttpStatus.SC_OK).extract().response();
 		String statusLine= response.getStatusLine();
 		System.out.print("response line is " + statusLine );
 		int statusCode = response.getStatusCode();
