@@ -1,0 +1,42 @@
+/target/
+/test-output/*
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+#*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+#Gradle Output
+.gradle/
+build/
+classes/
+generated/*
+Target/*
+
+#IntelliJ Output
+.idea/
+*.iml
+*.ipr
+*.iws
+
+#eclipse output
+.project
+.classpath
+*.log
+_project.xml
+_classpath.xml
+
+#Local specific properties
+resources/projectconfig.properties
+
+
+testng-xml
+testng-qa.xml
+testrailrunidconfig.properties
