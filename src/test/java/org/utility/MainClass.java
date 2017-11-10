@@ -274,15 +274,7 @@ public class MainClass {
 		testrail.projects().update(project.setCompleted(true)).execute();
 	}
 
-	// testing excel work
-	public static String getTriggerDataFromExcel(String sheetName,
-	        int rowNumber, int columnNumber) throws Exception {
-		ExcelReader.setExcelFile(workingDir + "/testData/Workbook.xlsx",
-		        sheetName);
-		String Data = ExcelReader.getCellData(rowNumber, columnNumber);
-		return Data;
-	}
-
+	
 	// method to return current date
 	public static String returnDate() {
 		DateFormat dformat = new SimpleDateFormat("yyyy-MM-dd");
