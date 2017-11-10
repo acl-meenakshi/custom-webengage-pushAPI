@@ -14,14 +14,14 @@ public class webEngageAPI extends RestAssuredMainClass {
 		Response response = given().urlEncodingEnabled(false)
 				.log().all().given()
 				.contentType(ContentType.JSON)
-				.header("Authorization", "Base_64")
+				//.conte("Authorization", "Base_64")
 				.header("username", property.getProperty("uname"))
 				.header("password", property.getProperty("pswd"))
 				.header("appid",property.getProperty("appid"))
 				.body(property.getProperty("version") + property.getProperty("ver_no") + "," +
 				property.getProperty("smsData") +  "{" +property.getProperty("toNo") + property.getProperty("mobilenumber") + ","
 				+ property.getProperty("fromNo") + property.getProperty("from") + ","
-				+ property.getProperty("body") + property.getProperty("body_text") + "}"
+				+ property.getProperty("body") + property.getProperty("body_text") + "}," 
 				+ property.getProperty("metadata") + "{"
 				+ property.getProperty("campaignType") + property.getProperty("pro_campaign") + ","
 				+ property.getProperty("timestamp") + property.getProperty("timestamp_value") + ","
@@ -33,7 +33,6 @@ public class webEngageAPI extends RestAssuredMainClass {
 		System.out.print("response line is " + statusLine);
 		int statusCode = response.getStatusCode();
 		System.out.println(" reponse code is " + statusCode);
-		Assert.assertEquals(response.jsonPath().get(""), "actual result");
 	}
 
 }
