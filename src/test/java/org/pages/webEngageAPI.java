@@ -14,7 +14,6 @@ public class webEngageAPI extends RestAssuredMainClass {
 		Response response = given().urlEncodingEnabled(false)
 				.log().all().given()
 				.contentType(ContentType.JSON)
-				//.conte("Authorization", "Base_64")
 				.header("username", property.getProperty("uname"))
 				.header("password", property.getProperty("pswd"))
 				.header("appid",property.getProperty("appid"))
